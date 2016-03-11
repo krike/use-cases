@@ -1,0 +1,13 @@
+{
+    "name": "use-cases/bitcoin-payment",
+    "description": "Bitcoin payment test project",
+    "authors": [
+        {
+            "name": "Christophe Debruel",
+            "email": "krike06@gmail.com"
+        }
+    ],
+    "require": {
+        "coinbase/coinbase": "dev-master"
+    }
+}
