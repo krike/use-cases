@@ -12,7 +12,10 @@ this.addEventListener('fetch', event => {
     }
 
     if (/\.jpg$|.gif$|.png$/.test(event.request.url)) {
-        var saveDataUrl = event.request.url.substr(0, event.request.url.lastIndexOf(".")) + '-save-data' + event.request.url.substr(event.request.url.lastIndexOf("."), event.request.url.length - 1);
+        var saveDataUrl = event.request.url.substr(0, event.request.url.lastIndexOf("."));
+        saveDataUrl += '-save-data';
+        saveDataUrl += event.request.url.substr(event.request.url.lastIndexOf("."), event.request.url.length - 1);
+
         event.respondWith(
             fetch(saveDataUrl, {
                 mode: 'no-cors'
